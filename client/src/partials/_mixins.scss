@@ -1,0 +1,78 @@
+@use './variables' as *;
+
+@mixin  tablet {
+    @media (min-width: $tablet-breakpoint) {
+      @content;
+    }
+}
+@mixin  desktop {
+  @media (min-width: $desktop-breakpoint)  {
+    @content;
+  }
+}
+
+//Main Green button
+@mixin form-button-style{
+	background-color:$main-green;
+	border-radius:50px;
+	height:50px;
+	border:none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:0.8rem;
+	font-weight:bold;
+	padding:15px 40px;
+	text-decoration:none;
+}
+@mixin form-button-active{
+    position:relative;
+	top:1px;
+	outline:none;
+	border: none;
+}
+@mixin form-button-hover{
+    background-color:$hover-green;
+}
+
+//Track Button
+@mixin track-button{
+	@include form-button-style;
+	background-color: $red;
+	height:30px;
+	padding:5px 20px;
+}
+@mixin track-button-active{
+	position:relative;
+	top:1px;
+	outline:none;
+	border: none;
+}
+@mixin track-button-hover{
+	background-color: $hover-red;
+}
+
+//Home button
+@mixin home-button{
+    @include form-button-style;
+}
+
+//Input 
+@mixin form-input{
+	height: 42px;
+	outline:none;
+	padding: 0.5rem;
+	border: 1px solid #cacaca;
+	margin: 5px 0 1rem 0;
+	font-size: 0.8rem;
+	color: #0a0a0a;
+	background-color: #fefefe;
+	box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
+	border-radius: 5px;
+}
+//Title
+@mixin desktop-title{
+	font-size: 1.7rem;
+    color: $red;
+    font-family: 'OpenSans-Bold';
+}

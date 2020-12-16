@@ -1,0 +1,88 @@
+@import "../../partials/mixins";
+@import "../../partials/fonts";
+@import "../../partials/variables";
+
+.landing{
+    &-wrapper{
+        margin: 0 150px;
+    }
+    &__title{
+        @include desktop-title;
+    }
+    &__user-title{
+        font-size: 1.2rem;
+        font-family: 'OpenSans-Bold';
+        color:$main-green;
+    }
+    &__user-name,&__user-span{
+        font-size: 1.2rem;
+        font-family: 'OpenSans-SemiBold';
+    }
+    &__user-name{
+        color:$main-green;
+    }
+    &__user-address{
+        font-size: 1rem;
+        padding:0;
+        margin:0
+    }
+}
+
+
+.task-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.task-list{
+    width:80%;
+    margin: 0 auto;
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        background-color: #e5f2fb;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        border-radius: 3px;
+        padding: 25px 30px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
+    &__table{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        padding: 25px 30px;
+        margin-bottom: 25px;
+        text-align: center;
+        .order-number {
+            flex-basis: 15%;
+        }
+        .store-name {
+            flex-basis: 30%;
+        }
+        .delivery{
+            &-date {
+                flex-basis: 15%;
+            }
+            &-status {
+                flex-basis: 20%;
+            }
+        }
+        .track-button {
+            flex-basis: 20%;
+            button{
+                @include track-button;
+            }
+            button:hover{
+                @include track-button-hover;
+            }
+            button:active{
+                @include track-button-active;
+            }
+        }
+    }
+}

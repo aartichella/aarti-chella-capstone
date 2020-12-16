@@ -1,0 +1,24 @@
+@import "../../partials/mixins";
+@import "../../partials/fonts";
+@import "../../partials/variables";
+
+.add-task{
+    width: 40%;
+    margin-right: 40px;
+    box-shadow: 2px 1px 8px 0px rgba(0,0,0,0.44);
+    padding: 20px;
+    border-radius: 5px;
+    height: fit-content;
+    &__wrap{
+        display: flex;
+        flex-direction: column;
+    }
+    &__input{
+        @include form-input;
+    }
+    &__button{
+        width:200px;
+        @include form-button-style;
+        margin: 0 auto;
+    }
+}

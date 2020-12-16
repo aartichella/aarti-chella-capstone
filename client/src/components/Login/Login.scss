@@ -1,0 +1,53 @@
+@import "../../partials/mixins";
+@import "../../partials/fonts";
+@import "../../partials/variables";
+
+.login{
+    width:70%;
+    margin: 0 auto;
+    &__title{
+        @include desktop-title;
+    }
+}
+.forms-wrap{
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.login-form,.signup-form{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 0 2rem;
+    
+    &__title{
+        font-size: 1.2rem;
+        color: $red;
+        font-family: 'OpenSans-SemiBold';
+    }
+    &__input{
+        @include form-input;
+    }
+    &__button{
+        @include form-button-style;
+        margin: 1rem 0 0 0;
+        &:focus{
+            outline: none;
+        }
+        &:active{
+            @include form-button-active;
+        }
+        &:hover{
+            @include form-button-hover
+        }
+    }
+} 
+.login-form{
+    height: 360px;
+}
+.signup-form{
+    padding-bottom: 3rem;
+}

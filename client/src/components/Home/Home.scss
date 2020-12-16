@@ -1,0 +1,44 @@
+@import "../../partials/mixins";
+@import "../../partials/fonts";
+@import "../../partials/variables";
+
+.home{
+    height: 100%;
+    width: 100%;
+    background-color: $main-blue;
+    background:linear-gradient(to bottom, $main-blue 5%, #d3dee4 100%);
+    display: flex;
+    justify-content: space-between;
+    &__title{
+        margin:0;
+    }
+    &__right{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding: 10rem 0 0 6rem;
+    }
+    &__button-tray{
+        display: flex;
+    }
+    &__login-button{
+        @include form-button-style;
+        margin-right: 4rem;
+        &:focus{
+            outline: none;
+        }
+        &:active{
+            @include form-button-active;
+        }
+        &:hover{
+            @include form-button-hover
+        }
+    }
+    &__left{
+        width:50%;
+    }
+    &__image{
+        width: 100%;
+        height: auto;
+    }
+}

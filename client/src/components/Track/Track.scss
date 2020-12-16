@@ -1,0 +1,63 @@
+@import "../../partials/mixins";
+@import "../../partials/fonts";
+@import "../../partials/variables";
+
+.order-details{
+    margin: 0 150px 0 150px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.details-info{
+    &-container {
+        width: 40%;
+    }
+    &__title{
+        @include desktop-title;
+        margin: 2rem 0 2rem 0;
+    }
+    &__text{
+        font-size: 1rem;
+        font-family: 'OpenSans-SemiBold';
+        margin:0 0 1rem 0;
+        padding:0;
+    }
+    &__label{
+        color:$main-green;
+        font-size: 1.2rem;
+        font-family: 'OpenSans-SemiBold';
+    }
+    &__button{
+        @include track-button;
+    }
+    &__button:hover{
+        @include track-button-hover;
+    }
+    &__button:active{
+        @include track-button-active;
+    }
+    &__button--green{
+        @include track-button;
+        background-color:$main-green;
+        margin-left: 1rem;
+    }
+    &__button--green:active{
+        @include track-button-active;
+        background-color:$hover-green;
+        outline:none
+    }
+    &__button--green:hover{
+        @include track-button-hover;
+        background-color:$hover-green;
+    }
+}
+.order-map{
+    width:100%;
+    position: relative;
+    margin-top: 30px;
+    height: 550px;
+}
+
+.no-show{
+    display:none;
+}

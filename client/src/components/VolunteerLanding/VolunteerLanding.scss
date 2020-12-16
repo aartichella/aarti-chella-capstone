@@ -1,0 +1,36 @@
+@import "../../partials/mixins";
+@import "../../partials/fonts";
+@import "../../partials/variables";
+
+.vol{
+    &-wrapper{
+        margin: 0 150px 0 150px;
+    }
+    &-task{
+        width:80%;
+    }
+
+}
+.landing{
+    &__title{
+        margin-bottom: 2rem;
+    }
+    &__user-address{
+        margin-bottom: 2rem;
+    }
+}
+.view-button{
+    flex-basis: 20%;
+    button{
+    @include track-button;
+    background-color: $main-green;
+    }
+    
+    button:hover{
+        background-color:$hover-green;
+    }
+    button:active{
+        @include form-button-active;
+    }
+}
+
