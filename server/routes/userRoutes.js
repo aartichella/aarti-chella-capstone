@@ -42,9 +42,10 @@ router.post('/login',(req, res) => {
 router.post('/signup',(req, res) => {
     console.log(req);
     let userList = readUsers();
-    const {name, address, city, email, password} = req.body;
+    const {username,name, address, city, email, password} = req.body;
     const newUser = {
         id: uuidv4(),
+        username,
         password,
         name,
         address,

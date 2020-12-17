@@ -7,6 +7,7 @@ class Login extends Component {
     constructor(props){
         super(props);
         this.state = {
+            signup_name: '',
             signup_username: '',
             signup_password: '',
             username: '',
@@ -61,8 +62,10 @@ class Login extends Component {
     handleSignupForm = (e) => {
         e.preventDefault();
         const userObj = {
-            name: this.state.signup_username,
+            name:this.state.signup_name,
+            username:this.state.signup_username,
             password: this.state.signup_password,
+            name: this.state.signup_name,
             email: this.state.email,
             address: this.state.address,
             city: this.state.city
@@ -84,7 +87,7 @@ class Login extends Component {
                 console.log('user signedUp');
                 this.props.history.push({
                     pathname: '/volunteer/landing',
-                    state: { loggedUser: data.data }
+                    state: { loggedVol: data.data }
                 })
             })
         }
@@ -98,7 +101,7 @@ class Login extends Component {
         else{
             heading=<h1 className="login__title">Volunteer Login</h1>
         }
-        const {signup_username, signup_password, address, city, username, password, email} = this.state
+        const {signup_username,signup_name, signup_password, address, city, username, password, email} = this.state
         return (
             <div className="login">
                 {heading}
@@ -123,6 +126,9 @@ class Login extends Component {
 
                             <label className="login-form__label">Enter your password</label>
                             <input type="password" name="signup_password" className="login-form__input" value={signup_password} onChange={this.handleUserInput}/>
+                            
+                            <label className="login-form__label">Enter your Name</label>
+                            <input type="text" name="signup_name" className="login-form__input" value={signup_name} onChange={this.handleUserInput}/>
 
                             <label className="login-form__label">Enter your email</label>
                             <input type="text" name="email" className="login-form__input" value={email} onChange={this.handleUserInput}/>

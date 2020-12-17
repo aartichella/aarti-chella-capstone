@@ -18,11 +18,12 @@
     "email": "david@david.com"
   },
   {
-    "id": "88485b43-cb8d-4463-8125-80f9e8ada5c2",
-    "password": "",
-    "name": "",
-    "address": "",
-    "city": "",
-    "email": ""
+    "id": "e637c863-129a-4b6d-bf53-995fd457bcc0",
+    "username": "test",
+    "password": "asdf",
+    "name": "Vijay A",
+    "address": "55 Halton St, Toronto, Ontario",
+    "city": "Toronto",
+    "email": "v@j.com"
   }
 ]

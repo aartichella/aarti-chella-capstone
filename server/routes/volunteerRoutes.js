@@ -41,11 +41,12 @@ router.post('/login',(req, res) => {
 router.post('/signup',(req, res) => {
     console.log(req);
     let userList = readVolunteers();
-    const {name, address, city, email, password} = req.body;
+    const {username,name, address, city, email, password} = req.body;
     const newUser = {
         id: uuidv4(),
         password,
         name,
+        username,
         address,
         city,
         email

@@ -2,10 +2,19 @@
   {
     "id": "123",
     "password": "dqdq",
-    "username":"bruce",
+    "username": "bruce",
     "name": "Bruce W",
     "address": "efwef",
     "city": "fefwe",
     "email": "dqw@g.com"
+  },
+  {
+    "id": "29fa682c-9a70-49ad-9682-d56988592c1d",
+    "password": "asdf",
+    "username":"paul",
+    "name": "Paul Antt",
+    "address": "123, Hallway St, Toronto, Ontario",
+    "city": "Toronto",
+    "email": "p@a.com"
   }
 ]

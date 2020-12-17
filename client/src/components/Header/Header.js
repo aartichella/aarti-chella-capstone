@@ -17,7 +17,9 @@ const Header = () => {
                     <div className="navbar-right">
                         <p className="navbar-right__item">Profile</p>
                         <p className="navbar-right__item">List</p>
+                        <Link to="/" className="navbar__link">
                         <p className="navbar-right__item">Logout</p>
+                        </Link>
                     </div>
                 </div>
             </div>
