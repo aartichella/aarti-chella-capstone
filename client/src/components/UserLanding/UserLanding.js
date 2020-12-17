@@ -70,7 +70,8 @@ class UserLanding extends Component{
                                     <Link to={
                                         {   pathname:`/user/track/${data.taskId}`,
                                             state:{
-                                                trackData: data
+                                                trackData: data,
+                                                type: 'user'
                                             }
                                         }
                                     } className="track-button">

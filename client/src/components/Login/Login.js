@@ -41,7 +41,7 @@ class Login extends Component {
                 console.log('user Login',data);
                 this.props.history.push({
                     pathname: '/user/landing',
-                    state: { loggedUser: data.data }
+                    state: { loggedUser: data.data, type: 'user' }
                 })
             })
         }
@@ -52,7 +52,7 @@ class Login extends Component {
                 console.log('volunteer Login',data);
                 this.props.history.push({
                     pathname: '/volunteer/landing',
-                    state: { loggedVol: data.data }
+                    state: { loggedVol: data.data, type: 'volunteer' }
                 })
             })
         }

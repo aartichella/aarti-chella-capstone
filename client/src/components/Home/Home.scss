@@ -9,8 +9,18 @@
     background:linear-gradient(to bottom, $main-blue 5%, #d3dee4 100%);
     display: flex;
     justify-content: space-between;
+    padding: 0 100px 0 100px;
+       
     &__title{
         margin:0;
+        font-size: 3rem;
+        font-family: 'OpenSans-SemiBold';
+        color: $red;
+    }
+    &__tagline{
+        font-size: 1rem;
+        font-style: italic;
+        margin-bottom: 30px;
     }
     &__right{
         width: 40%;
@@ -32,6 +42,20 @@
         }
         &:hover{
             @include form-button-hover
+        }
+        &--vol{
+            @include form-button-style;
+            background-color: $red;
+        }
+        &--vol:focus{
+            outline: none;
+        }
+        &--vol:active{
+            @include form-button-active;
+        }
+        &--vol:hover{
+            @include form-button-hover;
+            background-color:$hover-red;
         }
     }
     &__left{

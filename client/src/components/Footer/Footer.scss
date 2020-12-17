@@ -1,0 +1,39 @@
+@import "../../partials/mixins";
+@import "../../partials/fonts";
+@import "../../partials/variables";
+
+.footer{
+    height:150px;
+    background-color: $footer;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    &-logo{
+        width:20%;
+        display: flex;
+        align-items: center;
+        height:3rem;
+    }
+    &__logo-text{
+        color:white;
+        font-size: 1.5rem;
+        margin:0;
+    }
+    &-address,&-contact,&-socials{
+        width:25%;
+    }
+}
+
+.address{
+    &__title{
+        margin:0 0 10px 0 ;
+        font-size: 1.2rem;
+        font-family: 'OpenSans-Bold';
+    }
+    &__text{
+        margin:0;
+        font-size: 1rem;
+    }
+}

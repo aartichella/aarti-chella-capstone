@@ -46,7 +46,12 @@ const Track = (props) => {
                     <p className="details-info__text">{trackData.deliveryTime}</p>
 
                     <button className="details-info__button" onClick={()=>props.history.goBack()}>B A C K</button>
-                    <button className={(props.location.state.type && (trackData.volunteerId))? "no-show" :"details-info__button--green" } onClick={()=>acceptTask(trackData.taskId)}>A C C E P T</button>
+                    {
+                        (props.location.state.type == 'volunteer' && !trackData.volunteerId) ? 
+                        <button className="details-info__button--green" onClick={()=>acceptTask(trackData.taskId)}>A C C E P T</button> :
+                        null
+                    }
+                    
                 </div>
             </div>
             <div className="order-map">

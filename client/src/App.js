@@ -12,7 +12,7 @@ import UserLanding from './components/UserLanding/UserLanding';
 import VolunteerLanding from './components/VolunteerLanding/VolunteerLanding';
 import AddTask from './components/AddTask/AddTask';
 import Track from './components/Track/Track';
-
+import Footer from './components/Footer/Footer';
 import './App.scss';
 
 
@@ -47,7 +47,7 @@ export default function App() {
             <Home/>
           </Route>
         </Switch>
-
+        <Footer/>
     </Router>
   );
 }
